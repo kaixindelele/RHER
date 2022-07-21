@@ -11,7 +11,7 @@ The official code for paper “RHER: Relay-Style Learning for Robot Manipulation
     <span class="dropdown-caret"></span>
   </summary>
 
-  <video src="https://github.com/kaixindelele/RHER/blob/main/RHER.mp4" data-canonical-src="https://github.com/kaixindelele/RHER/blob/main/RHER.mp4" controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit" style="max-height:640px;">
+  <video src="https://user-images.githubusercontent.com/28528386/180237201-e7e7a174-397c-44c7-a11f-11054f59f1d3.mp4" data-canonical-src="https://user-images.githubusercontent.com/28528386/180237201-e7e7a174-397c-44c7-a11f-11054f59f1d3.mp4" controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit" style="max-height:640px;">
 
   </video>
 </details>
