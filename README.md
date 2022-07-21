@@ -63,4 +63,14 @@ Some of the baselines examples use [MuJoCo](http://www.mujoco.org) (multi-joint 
 ### MuJoCo-py (2.0.2.1)
 Instructions on setting up MuJoCo can be found [mujoco-py(2.0.2.1)](https://github.com/openai/mujoco-py/tree/v2.0.2.1)
 
+## Training models
+run in terminal
+```bash
+bash run_rher_push.sh
+```
 
+or
+run in pycharm
+```bash
+python -m baselines.run_rher_np1.py
+```
