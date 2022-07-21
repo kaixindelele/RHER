@@ -57,9 +57,10 @@ The master branch supports Tensorflow 1.14.
     ```
     
 
-### MuJoCo
+### MuJoCo (200)
 Some of the baselines examples use [MuJoCo](http://www.mujoco.org) (multi-joint dynamics in contact) physics simulator, which is proprietary and requires binaries and a license (license can be obtained from [mujoco-free-license](https://github.com/kaixindelele/RHER/blob/main/gym/mjkey.txt)
-Instructions on setting up MuJoCo can be found [here](https://github.com/openai/mujoco-py)
 
-require: mujoco(200); mujoco_py(2.0.2.13)
+### MuJoCo-py (2.0.2.1)
+Instructions on setting up MuJoCo can be found [mujoco-py(2.0.2.1)](https://github.com/openai/mujoco-py/tree/v2.0.2.1)
+
 
