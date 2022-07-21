@@ -17,7 +17,8 @@ The official code for paper “RHER: Relay-Style Learning for Robot Manipulation
 </details>
 
 # Baselines
-baselines is based on [OpenAI baselines](https://github.com/openai/baselines), and gym is based on [OpenAI gym](https://github.com/openai/gym/tree/0.18.0)
+Our baselines is based on [OpenAI baselines](https://github.com/openai/baselines), and gym is based on [OpenAI gym](https://github.com/openai/gym/tree/0.18.0)
+
 OpenAI Baselines is a set of high-quality implementations of reinforcement learning algorithms.
 
 These algorithms will make it easier for the research community to replicate, refine, and identify new ideas, and will create good baselines to build research on top of. Our DQN implementation and its variants are roughly on par with the scores in published papers. We expect they will be used as a base around which new ideas can be added, and as a tool for comparing a new approach against existing ones. 
@@ -29,3 +30,32 @@ Baselines requires python3 (>=3.5) with the development headers. You'll also nee
 ```bash
 sudo apt-get update && sudo apt-get install cmake libopenmpi-dev python3-dev zlib1g-dev
 ```
+
+## Virtual environment
+```bash
+conda create -n rher python=3.6
+```
+
+## Tensorflow versions
+The master branch supports Tensorflow 1.14.
+
+## Installation
+- Clone the repo and cd into it:
+    ```bash
+    git clone https://github.com/kaixindelele/RHER.git
+    cd RHER
+    ```
+- If you don't have TensorFlow installed already, install your favourite flavor of TensorFlow. In most cases, you may use
+    ```bash 
+    conda install tensorflow-gpu==1.14 # if you have a CUDA-compatible gpu and proper drivers
+    ```
+    
+    and
+    
+    ```bash 
+    pip install -r requirement.txt
+    ```
+    
+
+### MuJoCo
+Some of the baselines examples use [MuJoCo](http://www.mujoco.org) (multi-joint dynamics in contact) physics simulator, which is proprietary and requires binaries and a license (temporary 30-day license can be obtained from [www.mujoco.org](http://www.mujoco.org)). Instructions on setting up MuJoCo can be found [here](https://github.com/openai/mujoco-py)
