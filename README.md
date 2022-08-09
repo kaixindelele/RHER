@@ -2,6 +2,8 @@
 The official code for paper “RHER: Relay-Style Learning for Robot Manipulation Tasks Using Continual Reinforcement Learning and Hindsight Experience Replay”
 
 > Hindsight Experience Replay (HER) has an implicit virtual-positive sparse reward problem caused by invariant achieved goals, especially for robot manipulation tasks! To solve this problem, we propose a novel model-free continual RL algorithm, called Relay-HER (RHER). The proposed method first decomposes and rearranges the original long-horizon task into new sub-tasks with incremental complexity. Subsequently, a multi-task network is designed to learn the sub-tasks in ascending order of complexity. To solve the virtual-positive sparse reward problem, we propose a Random-Mixed Exploration Strategy (RMES), in which the achieved goals of the sub-task with higher complexity are quickly changed under the guidance of the one with lower complexity. The experimental results indicate the significant improvements in sample efficiency of RHER compared to vanilla-HER in five typical robot manipulation tasks, including Push, PickAndPlace, Drawer, Insert, and ObstaclePush. The proposed RHER method has also been applied to learn a contact-rich push task on a physical robot from scratch, and the success rate reached 10/10 with only 250 episodes
+
+
 > Inspired by the idea of a relay, when a traveler needs to explore further, he/she needs to be escorted by some experts,
 then he/she can quickly pass through the area that the expert is familiar with, and finally explore new areas by himself/herself.
 
