@@ -1,6 +1,8 @@
 # RHER: (Ralay-HER)
 The official code for paper “RHER: Relay-Style Learning for Robot Manipulation Tasks Using Continual Reinforcement Learning and Hindsight Experience Replay”
 
+[RHER-Overview](https://github.com/kaixindelele/RHER/blob/main/RHER.jpg)
+
 > HER has an implicit **virtual-positive** sparse reward problem caused by invariant achieved goals! 
 
 > To solve this problem, RHER:
