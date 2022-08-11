@@ -1,5 +1,5 @@
 # RHER: (Ralay-HER)
-The official code for paper “RHER: Relay-Style Learning for Robot Manipulation Tasks Using Continual Reinforcement Learning and Hindsight Experience Replay”
+The official code for paper “[Relay Hindsight Experience Replay: Continual Reinforcement Learning for Robot Manipulation Tasks with Sparse Rewards](https://arxiv.org/abs/2208.00843)”
 
 <p float="middle">
   <img src="https://github.com/kaixindelele/RHER/blob/main/RHER.jpg" />
