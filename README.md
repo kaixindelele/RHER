@@ -3,7 +3,7 @@ The official code for paper “[Relay Hindsight Experience Replay: Continual Rei
 
 ## The multi-objects manipulation has been solved!
 
-RHER can learn the stack task just within 300 (epoch) * 50 (episode) * 50 (step) = 750 k steps.
+RHER can learn the stack task just within 300 (epoch) * 50 (episode) * 50 (step) = 750 k steps, which means that RHER is the fastest model-free RL algorithm for these tasks.
 
 
 <p float="middle">
