@@ -30,7 +30,7 @@ If this paper is accepted, or the paper of multiple blocks is finished, I will r
     <svg aria-hidden="true" viewBox="0 0 16 16" version="1.1" data-view-component="true" height="16" width="16" class="octicon octicon-device-camera-video">
     <path fill-rule="evenodd" d="..."></path>
 </svg>
-    <span aria-label="Video description RHER.mp4" class="m-1">RHER.mp4</span>
+    <span aria-label="Video description Stack-RHER.mp4" class="m-1">RHER.mp4</span>
     <span class="dropdown-caret"></span>
   </summary>
 
