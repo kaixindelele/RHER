@@ -41,7 +41,7 @@ If this paper is accepted, or the paper of multiple blocks is finished, I will r
     <span class="dropdown-caret"></span>
   </summary>
 
-  <video src="https://user-images.githubusercontent.com/28528386/191252443-7141d1f5-8e3a-4225-9721-b115a07a7c69.mp4" data-canonical-src="https://user-images.githubusercontent.com/28528386/191252443-7141d1f5-8e3a-4225-9721-b115a07a7c69.mp4" controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit" style="max-height:640px;">
+  <video src="https://user-images.githubusercontent.com/28528386/192075197-11b1b6b1-3991-45da-ab75-4bed0cf10b54.mp4" data-canonical-src="https://user-images.githubusercontent.com/28528386/192075197-11b1b6b1-3991-45da-ab75-4bed0cf10b54.mp4" controls="controls" muted="muted" class="d-block rounded-bottom-2 width-fit" style="max-height:640px;">
 
   </video>
 </details>
