@@ -23,11 +23,15 @@ then he/she can quickly pass through the area that the expert is familiar with, 
 
 > The experimental results indicate the significant improvements in sample efficiency of RHER compared to vanilla-HER in five typical robot manipulation tasks, including Push, PickAndPlace, Drawer, Insert, and ObstaclePush. The proposed RHER method has also been applied to learn a contact-rich push task on a physical robot from scratch, and the success rate reached 10/10 with only 250 episodes
 
+## Other interesting motivation:
+1. Don’t overambitious, agent need pay more attention to the goal which can be changed by itself.
+2. One step at a time, gradually reach the distant goal.
+3. Standing on the shoulders of giants, we can avoid many detours, just like scientific research.
 
 
 
 
-If this paper is accepted, or the paper of multiple blocks is finished, I will release the code for the pytorch version.
+If this paper is accepted, or the paper of multiple blocks is finished, I will release the code for the pytorch version immediately~
 
 
 ## Training process for stack.
@@ -60,12 +64,6 @@ If this paper is accepted, or the paper of multiple blocks is finished, I will r
 
   </video>
 </details>
-
-## Other interesting motivation:
-1. Don’t overambitious, agent need pay more attention to the goal which can be changed by itself.
-2. One step at a time, gradually reach the distant goal.
-3. Standing on the shoulders of giants, we can avoid many detours, just like scientific research.
-
 
 # Baselines
 Our baselines is based on [OpenAI baselines](https://github.com/openai/baselines), and gym is based on [OpenAI gym](https://github.com/openai/gym/tree/0.18.0)
