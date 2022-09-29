@@ -7,6 +7,13 @@ Although the mainstream tasks are soft robot and deformable object, my work prov
 
 RHER is efficient and concise enough to be a new benchmark for the manipulation tasks with sparse rewards.
 
+Suitable tasks:
+Long-horizon manipulation tasks, in which both objects and goals are within the workspace of the robot.
+
+Unsuitable tasks:
+Stroke tasks: Slide, Tennis.
+
+
 ## Update!!! The multi-objects manipulation has been solved!
 
 RHER can learn the stack task just within 300 (epoch) * 50 (episode) * 50 (step) = **750 k steps**, which means that RHER is the fastest model-free RL algorithm for these tasks.
