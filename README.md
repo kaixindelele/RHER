@@ -1,6 +1,9 @@
 # RHER: (Ralay-HER)
 The official code for paper “[Relay Hindsight Experience Replay: Continual Reinforcement Learning for Robot Manipulation Tasks with Sparse Rewards](https://arxiv.org/abs/2208.00843)”
 
+If this paper is accepted, I will release the code for the pytorch version immediately~
+
+
 ## Update!!! The multi-objects manipulation has been solved!
 
 RHER can learn the stack task just within 300 (epoch) * 50 (episode) * 50 (step) = **750 k steps**, which means that RHER is the fastest model-free RL algorithm for these tasks.
@@ -27,11 +30,6 @@ then he/she can quickly pass through the area that the expert is familiar with, 
 1. Don’t overambitious, agent need pay more attention to the goal which can be changed by itself.
 2. One step at a time, gradually reach the distant goal.
 3. Standing on the shoulders of giants, we can avoid many detours, just like scientific research.
-
-
-
-
-If this paper is accepted, I will release the code for the pytorch version immediately~
 
 
 ## Training process for stack.
