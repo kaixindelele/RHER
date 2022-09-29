@@ -41,6 +41,16 @@ then he/she can quickly pass through the area that the expert is familiar with, 
 2. One step at a time, gradually reach the distant goal.
 3. Standing on the shoulders of giants, we can avoid many detours, just like scientific research.
 
+Some interesting experiments that don't have space to show in the article:
+
+1. Why learn a reach policy alone, instead of directly designing a simpler P-controller?
+
+a) I really did do a comparison experiment~ In the manipulation tasks without obstacle, the effect of P-controller is not much different from that of RHER, and some are even faster because it can also reach the object quickly. 
+
+But P-controller is much worse than RHER in tasks with obstacle, because RHER has the ability to adapt to the environment.
+
+b) And for the tasks of multiple blocks, especially PushTwoOjbect, it is difficult to design a base controller that can push object1 to the specified position and reach the vicinity of object2, but RHER can deal with it.
+
 
 ## Training process for stack.
 
