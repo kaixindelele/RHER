@@ -31,7 +31,7 @@ then he/she can quickly pass through the area that the expert is familiar with, 
 
 
 
-If this paper is accepted, or the paper of multiple blocks is finished, I will release the code for the pytorch version immediately~
+If this paper is accepted, I will release the code for the pytorch version immediately~
 
 
 ## Training process for stack.
