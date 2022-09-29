@@ -41,7 +41,7 @@ then he/she can quickly pass through the area that the expert is familiar with, 
 2. One step at a time, gradually reach the distant goal.
 3. Standing on the shoulders of giants, we can avoid many detours, just like scientific research.
 
-Some interesting experiments that don't have space to show in the article:
+## Some interesting experiments that don't have space to show in the article:
 
 1. Why learn a reach policy alone, instead of directly designing a simpler P-controller?
 
