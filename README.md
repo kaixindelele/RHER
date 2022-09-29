@@ -7,10 +7,10 @@ Although the mainstream tasks are soft robot and deformable object, my work prov
 
 RHER is efficient and concise enough to be a new benchmark for the manipulation tasks with sparse rewards.
 
-Suitable tasks:
+**Suitable tasks:**
 Long-horizon manipulation tasks, in which both objects and goals are within the workspace of the robot.
 
-Unsuitable tasks:
+**Unsuitable tasks:**
 Stroke tasks: Slide, Tennis.
 
 
