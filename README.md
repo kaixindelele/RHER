@@ -61,6 +61,12 @@ If this paper is accepted, or the paper of multiple blocks is finished, I will r
   </video>
 </details>
 
+## Other interesting motivation:
+1. Don’t overambitious, agent need pay more attention to the goal which can be changed by itself.
+2. One step at a time, gradually reach the distant goal.
+3. Standing on the shoulders of giants, we can avoid many detours, just like scientific research.
+
+
 # Baselines
 Our baselines is based on [OpenAI baselines](https://github.com/openai/baselines), and gym is based on [OpenAI gym](https://github.com/openai/gym/tree/0.18.0)
 
