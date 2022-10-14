@@ -7,6 +7,8 @@ This paper had been rejected by RAL becuase my poor writing ...
 
 Now that I'm redescribing the whole story, I've expanded the RHER to N (N <= 3) blocks of manipulation tasks!
 
+-----
+
 Although the mainstream tasks are soft robot and deformable object, my work provides an more effecient RL scheme for our community.
 
 RHER is efficient and concise enough to be a new benchmark for the manipulation tasks with sparse rewards.
