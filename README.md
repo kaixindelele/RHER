@@ -1,14 +1,18 @@
 # RHER: (Ralay-HER)
 The official code for paper “[Relay Hindsight Experience Replay: Continual Reinforcement Learning for Robot Manipulation Tasks with Sparse Rewards](https://arxiv.org/abs/2208.00843)”
 
-If this paper is accepted, I will release the code for the pytorch version immediately, which can be easier applied for other manipulation tasks~
+~~If this paper is accepted, I will release the code for the pytorch version immediately, which can be easier applied for other manipulation tasks~~
+
+This paper had been rejected by RAL becuase my poor writing ...
+
+Now that I'm redescribing the whole story, I've expanded the RHER to N (N <= 3) blocks of manipulation tasks!
 
 Although the mainstream tasks are soft robot and deformable object, my work provides an more effecient RL scheme for our community.
 
 RHER is efficient and concise enough to be a new benchmark for the manipulation tasks with sparse rewards.
 
 **Suitable tasks:**
-Long-horizon manipulation tasks, in which both objects and goals are within the workspace of the robot.
+Long-horizon manipulation tasks, in which both objects (Num <= 3) and goals are within the workspace of the robot.
 
 **Unsuitable tasks:**
 Stroke tasks: Slide, Tennis.
