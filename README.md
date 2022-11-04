@@ -1,5 +1,5 @@
 # RHER: (Ralay-HER)
-The official code for paper “[Relay Hindsight Experience Replay: Continual Reinforcement Learning for Robot Manipulation Tasks with Sparse Rewards](https://arxiv.org/abs/2208.00843)”
+The official code for paper “[Relay Hindsight Experience Replay: Self-Guided Continual Reinforcement Learning for Sequential Object Manipulation Tasks with Sparse Rewards](https://arxiv.org/abs/2208.00843)”
 
 ~~If this paper is accepted, I will release the code for the pytorch version immediately, which can be easier applied for other manipulation tasks~~
 
@@ -15,6 +15,7 @@ RHER is efficient and concise enough to be a new benchmark for the manipulation 
 
 **Suitable tasks:**
 Long-horizon manipulation tasks, in which both objects (Num <= 3) and goals are within the workspace of the robot.
+![RHER_multi_obj](https://user-images.githubusercontent.com/28528386/199898455-aa75683a-6803-4101-a48b-11425c924aae.png)
 
 **Unsuitable tasks:**
 Stroke tasks: Slide, Tennis.
@@ -23,11 +24,6 @@ Stroke tasks: Slide, Tennis.
 ## Update!!! The multi-objects manipulation has been solved!
 
 RHER can learn the stack task just within 300 (epoch) * 50 (episode) * 50 (step) = **750 k steps**, which means that RHER is the fastest model-free RL algorithm for these tasks.
-
-
-<p float="middle">
-  <img src="https://github.com/kaixindelele/RHER/blob/main/RHER.jpg" />
-</p>
 
 > HER has an implicit **virtual-positive** sparse reward problem caused by invariant achieved goals! 
 
