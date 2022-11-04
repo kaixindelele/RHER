@@ -17,6 +17,9 @@ RHER is efficient and concise enough to be a new benchmark for the manipulation 
 Long-horizon manipulation tasks, in which both objects (Num <= 3) and goals are within the workspace of the robot.
 ![RHER_multi_obj](https://user-images.githubusercontent.com/28528386/199898455-aa75683a-6803-4101-a48b-11425c924aae.png)
 
+
+-----
+
 **Unsuitable tasks:**
 Stroke tasks: Slide, Tennis.
 
@@ -25,7 +28,8 @@ Stroke tasks: Slide, Tennis.
 
 RHER can learn the stack task just within 300 (epoch) * 50 (episode) * 50 (step) = **750 k steps**, which means that RHER is the fastest model-free RL algorithm for these tasks.
 
-> HER has an implicit **virtual-positive** sparse reward problem caused by invariant achieved goals! 
+> HER has an implicit **non-negative** sparse reward problem caused by indentical achieved goals! 
+![RHER_relay](https://user-images.githubusercontent.com/28528386/199898834-72cd34df-c00c-48c3-9cef-0afb4d0946c2.png)
 
 > To solve this problem, RHER:
 > 1) first decomposes and rearranges the original long-horizon task into new sub-tasks with incremental complexity.
