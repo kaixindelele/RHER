@@ -16,6 +16,7 @@ RHER is efficient and concise enough to be a new benchmark for the manipulation 
 **Suitable tasks:**
 Long-horizon manipulation tasks, in which both objects (Num <= 3) and goals are within the workspace of the robot.
 ![RHER_multi_obj](https://user-images.githubusercontent.com/28528386/199898455-aa75683a-6803-4101-a48b-11425c924aae.png)
+![Fig_multi_obj](https://user-images.githubusercontent.com/28528386/199915337-a5649596-fd22-40a4-a027-fed6ccb35342.png)
 
 
 -----
