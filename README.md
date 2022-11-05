@@ -1,4 +1,4 @@
-# RHER: (Ralay-HER)
+# RHER: (Ralay-HER) paper has been updated!
 The official code for paper “[Relay Hindsight Experience Replay: Self-Guided Continual Reinforcement Learning for Sequential Object Manipulation Tasks with Sparse Rewards](https://arxiv.org/abs/2208.00843)”
 
 ~~If this paper is accepted, I will release the code for the pytorch version immediately, which can be easier applied for other manipulation tasks~~
