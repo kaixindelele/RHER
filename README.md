@@ -4,6 +4,15 @@ The official code for paper “[Relay Hindsight Experience Replay: Self-Guided C
 ## 1. Abstract:
 > Exploration with sparse rewards remains a challenging research problem in reinforcement learning (RL). Especially for sequential object manipulation tasks, the RL agent always receives negative rewards until completing all sub-tasks, which results in low exploration efficiency. To solve these tasks efficiently, we propose a novel self-guided continual RL framework, RelayHER (RHER). RHER first decomposes a sequential task into new sub-tasks with increasing complexity and ensures that the simplest sub-task can be learned quickly by utilizing Hindsight Experience Replay (HER). Secondly, we design a multi-goal & multi-task network to learn these sub-tasks simultaneously. Finally, we propose a Self-Guided Exploration Strategy (SGES). With SGES, the learned sub-task policy will guide the agent to the states that are helpful to learn more complex sub-task with HER. By this self-guided exploration and relay policy learning, RHER can solve these sequential tasks efficiently stage by stage. The experimental results show that RHER significantly outperforms vanilla-HER in sample-efficiency on five singleobject and five complex multi-object manipulation tasks (e.g., Push, Insert, ObstaclePush, Stack, TStack, etc.). The proposed RHER has also been applied to learn a contact-rich push task on a physical robot from scratch, and the success rate reached 10/10 with only 250 episodes.
 
+## 2. Contributions:
+(1) For common complex sequential object manipulation tasks with sparse rewards, this paper develops an elegant and sampleefficient self-guided continual RL framework, RHER.
+
+(2) To achieve self-guided exploration, we propose a multigoal & multi-task network to learn multiple sub-tasks with different complexity simultaneously.
+
+(3) The proposed RHER method is more sample-efficient than vanilla-HER and state-of-the-art methods, which are validated in the standard manipulation tasks from the OpenAI Gym;
+
+(4) To verify that the RHER is suitable for common sequential object manipulation tasks, we conduct three extra typical single-object tasks, five more complex multi-object tasks, and even a physical robot task.
+
 
 If this paper is accepted, I will release the code for the pytorch version immediately
 
@@ -13,7 +22,7 @@ Although the mainstream tasks are soft robot and deformable object, my work prov
 
 RHER is efficient and concise enough to be a new benchmark for the manipulation tasks with sparse rewards.
 
-**2. Suitable tasks:**
+## 3. Suitable tasks:
 Complex sequential object manipulation tasks, in which both objects (Num <= 3) and goals are within the workspace of the robot.
 
 ![RHER_multi_obj](https://user-images.githubusercontent.com/28528386/199898455-aa75683a-6803-4101-a48b-11425c924aae.png)
@@ -30,7 +39,7 @@ Stroke tasks: Slide, Tennis.
 
 -----
 
-## Motivation:
+## 4. Motivation:
 HER works for simple reach tasks, but faces low sample efficient for manipulation tasks.
 ![image](https://user-images.githubusercontent.com/28528386/200155407-c5461a1f-ef55-4f97-8537-bab87af11d8b.png)
 
@@ -40,7 +49,7 @@ Reported in 'Multi-Goal Reinforcement Learning: Challenging Robotics Environment
 
 I found an implicit problem of HER:
 
-## 3. HER introduces an implicit **non-negative** sparse reward problem for manipulation tasks
+## 5. HER introduces an implicit **non-negative** sparse reward problem for manipulation tasks
 
 HER has an implicit **non-negative** sparse reward problem caused by indentical achieved goals! 
 ![HER_nnsr](https://user-images.githubusercontent.com/28528386/200154197-02e6ca8a-a16d-4a1e-a60b-ca1fd40600d4.png)
@@ -48,46 +57,46 @@ HER has an implicit **non-negative** sparse reward problem caused by indentical 
 Fig. 3. Illustration of the problem of non-negative sparse rewards with HER. For a typical sequential task, push task, the agent fails to push the object
 to the desired position, and even fails to change the object position. So all original rewards are -1, and all hindsight rewards are 0, the latter can also be regarded as a kind of sparse reward problem, but with non-negative rewards.
 
-## 4. A diagram of RHER:
+## 6. A diagram of RHER:
 ![RHER_overall](https://user-images.githubusercontent.com/28528386/200154505-0c295992-9794-40dc-98da-cb482ff65c08.png)
 
 Fig4. A diagram of RHER, of which the key components are shown in the yellow rectangles. This framework achieves self-guided exploration for a sequential task.
 
-## 4.1 A. Task Decomposition and Rearrangement
+### 6.1 A. Task Decomposition and Rearrangement
 ![RHER_task](https://user-images.githubusercontent.com/28528386/200154536-f60bae8b-98ad-45e8-9314-2b628552e90a.png)
 
 Fig5. Sequential task decomposition and rearrangement.
 
-## 4.2 B. Multi-goal & Multi-task RL Model.
+### 6.2 B. Multi-goal & Multi-task RL Model.
 ![RHER_goal_encoding](https://user-images.githubusercontent.com/28528386/200154666-3f5cdd74-36df-45c9-b2ea-99f9ab1ea1b0.png)
 
 Fig6. Multi-goal & Multi-task RL Model.
 
 
-## 4.3 C. Maximize the Use of All Data by HER.
+### 6.3 C. Maximize the Use of All Data by HER.
 1. In the RHER framework, updating a policy can not only use its own explored data but also relabel the data collected by other policies by HER. 
 
 2. Coincidentally, for continual RL, the agent also needs to generate non-negative samples by HER.
 
-## 4.4 D. Self-Guided Exploration Strategy (SGES)
+### 6.4 D. Self-Guided Exploration Strategy (SGES)
 ![RHER-SGES](https://user-images.githubusercontent.com/28528386/200154765-f9610d50-f392-436a-853c-4ec6ce5fcb5d.png)
 
 Fig7. Illustration of Self-Guided Exploration Strategy (SGES) in a toy push task. The black solid curve represents actual trajectory with SGES.
 
-## 4.5 E. Relay Policy Learning.
+### 6.5 E. Relay Policy Learning.
 ![RHER_relay](https://user-images.githubusercontent.com/28528386/199898834-72cd34df-c00c-48c3-9cef-0afb4d0946c2.png)
 
 Fig8. A diagram of relay policy learning for a task with 3 stages. By using HER and SGES, RHER can solve the whole sequential task stage by stage with sample efficient. 
 
 **Like students for scientific research, who are guided by advisers and other researchers until they need to explore a new field.**
 
-## Other interesting motivation:
+## 7. Other interesting motivation:
 1. Don’t overambitious, agent need pay more attention to the goal which can be changed by itself.
 2. One step at a time, gradually reach the distant goal.
 3. Standing on the shoulders of giants, we can avoid many detours, just like scientific research.
 
 
-## Some interesting experiments that don't have space to show in the article:
+## 8. Some interesting experiments that don't have space to show in the article:
 
 1. Why learn a reach policy alone, instead of directly designing a simpler P-controller?
 
@@ -97,8 +106,8 @@ But P-controller is much worse than RHER in tasks with obstacle, because RHER ha
 
 b) As for the tasks of multiple blocks, especially DPush, it is difficult to design a base controller that can push object1 to the specified position and reach the vicinity of object2, but RHER can deal with it.
 
-
-## Training process for stack.
+## 9. Training Videos:
+### 9.1 Training process for stack.
 
 <details open="" class="details-reset border rounded-2">
   <summary class="px-3 py-2 border-bottom">
@@ -115,7 +124,7 @@ b) As for the tasks of multiple blocks, especially DPush, it is difficult to des
 </details>
 
 
-## Training process for DrawerBox.
+### 9.2 Training process for DrawerBox.
 
 <details open="" class="details-reset border rounded-2">
   <summary class="px-3 py-2 border-bottom">
@@ -131,7 +140,7 @@ b) As for the tasks of multiple blocks, especially DPush, it is difficult to des
   </video>
 </details>
 
-
+### 9.3 Training process for Real World Task.
 <details open="" class="details-reset border rounded-2">
   <summary class="px-3 py-2 border-bottom">
     <svg aria-hidden="true" viewBox="0 0 16 16" version="1.1" data-view-component="true" height="16" width="16" class="octicon octicon-device-camera-video">
@@ -146,7 +155,9 @@ b) As for the tasks of multiple blocks, especially DPush, it is difficult to des
   </video>
 </details>
 
-# Baselines
+## 11. Reproduce:
+
+### Baselines
 Our baselines is based on [OpenAI baselines](https://github.com/openai/baselines), and gym is based on [OpenAI gym](https://github.com/openai/gym/tree/0.18.0)
 
 OpenAI Baselines is a set of high-quality implementations of reinforcement learning algorithms.
