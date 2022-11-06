@@ -38,7 +38,7 @@ Each epoch means 19 * 2 * 50 = 1900 episodes!
 
 Reported in 'Multi-Goal Reinforcement Learning: Challenging Robotics Environments and Request for Research'
 
-I found a implicit problem of HER:
+I found an implicit problem of HER:
 
 ## 3. HER introduces an implicit **non-negative** sparse reward problem for manipulation tasks
 
