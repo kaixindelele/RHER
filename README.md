@@ -7,7 +7,7 @@ The official code for paper “[Relay Hindsight Experience Replay: Self-Guided C
 ## 2. Contributions:
 (1) For common complex sequential object manipulation tasks with sparse rewards, this paper develops an elegant and sample efficient **self-guided continual RL framework**, RHER.
 
-(2) To achieve self-guided exploration, we propose a **multigoal & multi-task** network to learn multiple sub-tasks with different complexity simultaneously.
+(2) To achieve self-guided exploration, we propose a **multi-goal & multi-task** network to learn multiple sub-tasks with different complexity simultaneously.
 
 (3) The proposed RHER method is more sample-efficient than vanilla-HER and state-of-the-art methods, which are validated in the standard manipulation tasks from the OpenAI Gym;
 
