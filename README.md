@@ -14,7 +14,7 @@ The official code for paper “[Relay Hindsight Experience Replay: Self-Guided C
 (4) To verify that the RHER is suitable for common sequential object manipulation tasks, we conduct three extra typical single-object tasks, five more complex multi-object tasks, and even a physical robot task.
 
 
-I had release all codes for single-object tasks, if this paper is accepted, I will release the code for the pytorch version immediately.
+I had release all codes for single-object tasks, if this paper is accepted, I will release the codes for multi-object tasks with the pytorch version immediately.
 
 -----
 
