@@ -79,6 +79,9 @@ Fig6. Multi-goal & Multi-task RL Model.
 2. Coincidentally, for continual RL, the agent also needs to generate non-negative samples by HER.
 
 ### 6.4 D. Self-Guided Exploration Strategy (SGES)
+
+**Like students for scientific research, who are guided by advisers and other researchers until they need to explore a new field.**
+
 ![RHER-SGES](https://user-images.githubusercontent.com/28528386/200154765-f9610d50-f392-436a-853c-4ec6ce5fcb5d.png)
 
 Fig7. Illustration of Self-Guided Exploration Strategy (SGES) in a toy push task. The black solid curve represents actual trajectory with SGES.
@@ -87,8 +90,6 @@ Fig7. Illustration of Self-Guided Exploration Strategy (SGES) in a toy push task
 ![RHER_relay](https://user-images.githubusercontent.com/28528386/199898834-72cd34df-c00c-48c3-9cef-0afb4d0946c2.png)
 
 Fig8. A diagram of relay policy learning for a task with 3 stages. By using HER and SGES, RHER can solve the whole sequential task stage by stage with sample efficient. 
-
-**Like students for scientific research, who are guided by advisers and other researchers until they need to explore a new field.**
 
 ## 7. Other interesting motivation:
 1. Don’t overambitious, agent need pay more attention to the goal which can be changed by itself.
