@@ -5,7 +5,7 @@ The official code for paper “[Relay Hindsight Experience Replay: Self-Guided C
 > Exploration with sparse rewards remains a challenging research problem in reinforcement learning (RL). Especially for sequential object manipulation tasks, the RL agent always receives negative rewards until completing all sub-tasks, which results in low exploration efficiency. To solve these tasks efficiently, we propose a novel self-guided continual RL framework, RelayHER (RHER). RHER first decomposes a sequential task into new sub-tasks with increasing complexity and ensures that the simplest sub-task can be learned quickly by utilizing Hindsight Experience Replay (HER). Secondly, we design a multi-goal & multi-task network to learn these sub-tasks simultaneously. Finally, we propose a Self-Guided Exploration Strategy (SGES). With SGES, the learned sub-task policy will guide the agent to the states that are helpful to learn more complex sub-task with HER. By this self-guided exploration and relay policy learning, RHER can solve these sequential tasks efficiently stage by stage. The experimental results show that RHER significantly outperforms vanilla-HER in sample-efficiency on five singleobject and five complex multi-object manipulation tasks (e.g., Push, Insert, ObstaclePush, Stack, TStack, etc.). The proposed RHER has also been applied to learn a contact-rich push task on a physical robot from scratch, and the success rate reached 10/10 with only 250 episodes.
 
 
-~~If this paper is accepted, I will release the code for the pytorch version immediately~~
+If this paper is accepted, I will release the code for the pytorch version immediately
 
 -----
 
@@ -38,6 +38,7 @@ Each epoch means 19 * 2 * 50 = 1900 episodes!
 
 Reported in 'Multi-Goal Reinforcement Learning: Challenging Robotics Environments and Request for Research'
 
+I found a implicit problem of HER:
 
 ## 3. HER introduces an implicit **non-negative** sparse reward problem for manipulation tasks
 
@@ -80,12 +81,11 @@ Fig8. A diagram of relay policy learning for a task with 3 stages. By using HER 
 
 **Like students for scientific research, who are guided by advisers and other researchers until they need to explore a new field.**
 
-> The experimental results indicate the significant improvements in sample efficiency of RHER compared to vanilla-HER in five typical robot manipulation tasks, including Push, PickAndPlace, Drawer, Insert, and ObstaclePush. The proposed RHER method has also been applied to learn a contact-rich push task on a physical robot from scratch, and the success rate reached 10/10 with only 250 episodes
-
 ## Other interesting motivation:
 1. Don’t overambitious, agent need pay more attention to the goal which can be changed by itself.
 2. One step at a time, gradually reach the distant goal.
 3. Standing on the shoulders of giants, we can avoid many detours, just like scientific research.
+
 
 ## Some interesting experiments that don't have space to show in the article:
 
@@ -95,7 +95,7 @@ a) I really did do a comparison experiment~ In the manipulation tasks without ob
 
 But P-controller is much worse than RHER in tasks with obstacle, because RHER has the ability to adapt to the environment.
 
-b) And for the tasks of multiple blocks, especially PushTwoOjbect, it is difficult to design a base controller that can push object1 to the specified position and reach the vicinity of object2, but RHER can deal with it.
+b) As for the tasks of multiple blocks, especially DPush, it is difficult to design a base controller that can push object1 to the specified position and reach the vicinity of object2, but RHER can deal with it.
 
 
 ## Training process for stack.
