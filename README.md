@@ -1,45 +1,84 @@
 # RHER: (Ralay-HER)--A revolutionary variant of HER!
 The official code for paper “[Relay Hindsight Experience Replay: Self-Guided Continual Reinforcement Learning for Sequential Object Manipulation Tasks with Sparse Rewards](https://arxiv.org/abs/2208.00843)”
 
-~~If this paper is accepted, I will release the code for the pytorch version immediately, which can be easier applied for other manipulation tasks~~
+## 1. Abstract:
+> Exploration with sparse rewards remains a challenging research problem in reinforcement learning (RL). Especially for sequential object manipulation tasks, the RL agent always receives negative rewards until completing all sub-tasks, which results in low exploration efficiency. To solve these tasks efficiently, we propose a novel self-guided continual RL framework, RelayHER (RHER). RHER first decomposes a sequential task into new sub-tasks with increasing complexity and ensures that the simplest sub-task can be learned quickly by utilizing Hindsight Experience Replay (HER). Secondly, we design a multi-goal & multi-task network to learn these sub-tasks simultaneously. Finally, we propose a Self-Guided Exploration Strategy (SGES). With SGES, the learned sub-task policy will guide the agent to the states that are helpful to learn more complex sub-task with HER. By this self-guided exploration and relay policy learning, RHER can solve these sequential tasks efficiently stage by stage. The experimental results show that RHER significantly outperforms vanilla-HER in sample-efficiency on five singleobject and five complex multi-object manipulation tasks (e.g., Push, Insert, ObstaclePush, Stack, TStack, etc.). The proposed RHER has also been applied to learn a contact-rich push task on a physical robot from scratch, and the success rate reached 10/10 with only 250 episodes.
 
-This paper had been rejected by RAL becuase my poor writing ...
 
-Now that I'm redescribing the whole story, I've expanded the RHER to N (N <= 3) blocks of manipulation tasks!
+~~If this paper is accepted, I will release the code for the pytorch version immediately~~
 
 -----
 
-Although the mainstream tasks are soft robot and deformable object, my work provides an more effecient RL scheme for our community.
+Although the mainstream tasks are soft robot and deformable object, my work provides an more effecient RL scheme for RL-Robotics community.
 
 RHER is efficient and concise enough to be a new benchmark for the manipulation tasks with sparse rewards.
 
-**Suitable tasks:**
-Long-horizon manipulation tasks, in which both objects (Num <= 3) and goals are within the workspace of the robot.
+**2. Suitable tasks:**
+Complex sequential object manipulation tasks, in which both objects (Num <= 3) and goals are within the workspace of the robot.
+
 ![RHER_multi_obj](https://user-images.githubusercontent.com/28528386/199898455-aa75683a-6803-4101-a48b-11425c924aae.png)
+
+Fig1. Multi-object tasks graphs.
+
+
 ![Fig_multi_obj](https://user-images.githubusercontent.com/28528386/199915337-a5649596-fd22-40a4-a027-fed6ccb35342.png)
 
+Fig2. Learning curve of multi-object tasks.
+
+Unsuitable tasks:
+Stroke tasks: Slide, Tennis.
 
 -----
 
-**Unsuitable tasks:**
-Stroke tasks: Slide, Tennis.
+## Motivation:
+HER works for simple reach tasks, but faces low sample efficient for manipulation tasks.
+![image](https://user-images.githubusercontent.com/28528386/200155407-c5461a1f-ef55-4f97-8537-bab87af11d8b.png)
+
+Each epoch means 19 * 2 * 50 = 1900 episodes!
+
+Reported in 'Multi-Goal Reinforcement Learning: Challenging Robotics Environments and Request for Research'
 
 
-## Update!!! The multi-objects manipulation has been solved!
+## 3. HER introduces an implicit **non-negative** sparse reward problem for manipulation tasks
 
-RHER can learn the stack task just within 300 (epoch) * 50 (episode) * 50 (step) = **750 k steps**, which means that RHER is the fastest model-free RL algorithm for these tasks.
+HER has an implicit **non-negative** sparse reward problem caused by indentical achieved goals! 
+![HER_nnsr](https://user-images.githubusercontent.com/28528386/200154197-02e6ca8a-a16d-4a1e-a60b-ca1fd40600d4.png)
 
-> HER has an implicit **non-negative** sparse reward problem caused by indentical achieved goals! 
+Fig. 3. Illustration of the problem of non-negative sparse rewards with HER. For a typical sequential task, push task, the agent fails to push the object
+to the desired position, and even fails to change the object position. So all original rewards are -1, and all hindsight rewards are 0, the latter can also be regarded as a kind of sparse reward problem, but with non-negative rewards.
+
+## 4. A diagram of RHER:
+![RHER_overall](https://user-images.githubusercontent.com/28528386/200154505-0c295992-9794-40dc-98da-cb482ff65c08.png)
+
+Fig4. A diagram of RHER, of which the key components are shown in the yellow rectangles. This framework achieves self-guided exploration for a sequential task.
+
+## 4.1 A. Task Decomposition and Rearrangement
+![RHER_task](https://user-images.githubusercontent.com/28528386/200154536-f60bae8b-98ad-45e8-9314-2b628552e90a.png)
+
+Fig5. Sequential task decomposition and rearrangement.
+
+## 4.2 B. Multi-goal & Multi-task RL Model.
+![RHER_goal_encoding](https://user-images.githubusercontent.com/28528386/200154666-3f5cdd74-36df-45c9-b2ea-99f9ab1ea1b0.png)
+
+Fig6. Multi-goal & Multi-task RL Model.
+
+
+## 4.3 C. Maximize the Use of All Data by HER.
+1. In the RHER framework, updating a policy can not only use its own explored data but also relabel the data collected by other policies by HER. 
+
+2. Coincidentally, for continual RL, the agent also needs to generate non-negative samples by HER.
+
+## 4.4 D. Self-Guided Exploration Strategy (SGES)
+![RHER-SGES](https://user-images.githubusercontent.com/28528386/200154765-f9610d50-f392-436a-853c-4ec6ce5fcb5d.png)
+
+Fig7. Illustration of Self-Guided Exploration Strategy (SGES) in a toy push task. The black solid curve represents actual trajectory with SGES.
+
+## 4.5 E. Relay Policy Learning.
 ![RHER_relay](https://user-images.githubusercontent.com/28528386/199898834-72cd34df-c00c-48c3-9cef-0afb4d0946c2.png)
 
-> To solve this problem, RHER:
-> 1) first decomposes and rearranges the original long-horizon task into new sub-tasks with incremental complexity.
-> 2) design a multi-task network to learn the sub-tasks in ascending order of complexity. 
-> 3) To solve the virtual-positive sparse reward problem, we propose a Random-Mixed Exploration Strategy (RMES), in which the achieved goals of the sub-task with higher complexity are quickly changed under the guidance of the one with lower complexity.
+Fig8. A diagram of relay policy learning for a task with 3 stages. By using HER and SGES, RHER can solve the whole sequential task stage by stage with sample efficient. 
 
-> Inspired by the idea of a relay, when a traveler needs to explore further, he/she needs to be escorted by some experts,
-then he/she can quickly pass through the area that the expert is familiar with, and finally explore new areas by himself/herself.
-
+**Like students for scientific research, who are guided by advisers and other researchers until they need to explore a new field.**
 
 > The experimental results indicate the significant improvements in sample efficiency of RHER compared to vanilla-HER in five typical robot manipulation tasks, including Push, PickAndPlace, Drawer, Insert, and ObstaclePush. The proposed RHER method has also been applied to learn a contact-rich push task on a physical robot from scratch, and the success rate reached 10/10 with only 250 episodes
 
