@@ -52,7 +52,8 @@ I found an implicit problem of HER:
 ## 5. HER introduces an implicit **non-negative** sparse reward problem for manipulation tasks
 
 HER has an implicit **non-negative** sparse reward problem caused by indentical achieved goals! 
-![HER_nnsr](https://user-images.githubusercontent.com/28528386/200154197-02e6ca8a-a16d-4a1e-a60b-ca1fd40600d4.png)
+![HER_nnsr](https://user-images.githubusercontent.com/28528386/200286336-c6eea61e-7319-475a-be83-33db73f01bf4.png)
+
 
 Fig. 3. Illustration of the problem of non-negative sparse rewards with HER. For a typical sequential task, push task, the agent fails to push the object
 to the desired position, and even fails to change the object position. So all original rewards are -1, and all hindsight rewards are 0, the latter can also be regarded as a kind of sparse reward problem, but with non-negative rewards.
