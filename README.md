@@ -166,7 +166,7 @@ b) As for the tasks of multiple blocks, especially DPush, it is difficult to des
   </video>
 </details>
 
-### 9.4 Training process for TPush and TStack with Test Success Rate about 80%.
+### 9.4 Testing process of TPush and TStack with Success Rate about 80%.
 
 <details open="" class="details-reset border rounded-2">
   <summary class="px-3 py-2 border-bottom">
