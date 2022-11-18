@@ -10,8 +10,6 @@ How to use the idea of RHER to inspire me to quickly learn to write this paper?
 
 In addition, which journal is appropriate for this article?
 
-![HER_INNR](https://user-images.githubusercontent.com/28528386/202651573-25edce7c-6a15-42d2-b38d-8efa008aceac.png)
-
 ## 1. Abstract:
 > Exploration with sparse rewards remains a challenging research problem in reinforcement learning (RL). Especially for sequential object manipulation tasks, the RL agent always receives negative rewards until completing all sub-tasks, which results in low exploration efficiency. To solve these tasks efficiently, we propose a novel **self-guided continual RL** framework, Relay-HER (RHER). RHER first decomposes a sequential task into new sub-tasks with increasing complexity and ensures that the simplest sub-task can be learned quickly by utilizing Hindsight Experience Replay (HER). Secondly, we design a multi-goal & multi-task network to learn these sub-tasks simultaneously. Finally, we propose a Self-Guided Exploration Strategy (SGES). With SGES, the learned sub-task policy will guide the agent to the states that are helpful to learn more complex sub-task with HER. By this self-guided exploration and relay policy learning, RHER can solve these sequential tasks efficiently stage by stage. The experimental results show that RHER significantly outperforms vanilla-HER in sample-efficiency on five singleobject and five complex multi-object manipulation tasks (e.g., Push, Insert, ObstaclePush, Stack, TStack, etc.). The proposed RHER has also been applied to learn a contact-rich push task on a physical robot from scratch, and the success rate reached 10/10 with only 250 episodes.
 
@@ -63,11 +61,12 @@ I found an implicit problem of HER:
 ## 5. HER introduces an implicit **non-negative** sparse reward problem for manipulation tasks
 
 HER has an implicit **non-negative** sparse reward problem caused by indentical achieved goals! 
-![HER_nnsr](https://user-images.githubusercontent.com/28528386/200286336-c6eea61e-7319-475a-be83-33db73f01bf4.png)
+
+![HER_INNR](https://user-images.githubusercontent.com/28528386/202651573-25edce7c-6a15-42d2-b38d-8efa008aceac.png)
 
 
-Fig. 3. Illustration of the problem of non-negative sparse rewards with HER. For a typical sequential task, push task, the agent fails to push the object
-to the desired position, and even fails to change the object position. So all original rewards are -1, and all hindsight rewards are 0, the latter can also be regarded as a kind of sparse reward problem, but with non-negative rewards.
+
+Fig. 3. Illustration of the difference of HER and RHER. (a) The problem of Identical Non-Negative Rewards (INNR) with HER. (b) The proposed RHER solves the INNR problem by Self-Guided Exploration Strategy (SGES). (c) The results of comparation of RHER and HER in FetchPush.
 
 ## 6. A diagram of RHER:
 ![RHER_overall](https://user-images.githubusercontent.com/28528386/200154505-0c295992-9794-40dc-98da-cb482ff65c08.png)
