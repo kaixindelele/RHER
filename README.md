@@ -10,7 +10,7 @@ How to use the idea of RHER to inspire me to quickly learn to write this paper?
 
 In addition, which journal is appropriate for this article?
 
-
+![HER_INNR](https://user-images.githubusercontent.com/28528386/202651573-25edce7c-6a15-42d2-b38d-8efa008aceac.png)
 
 ## 1. Abstract:
 > Exploration with sparse rewards remains a challenging research problem in reinforcement learning (RL). Especially for sequential object manipulation tasks, the RL agent always receives negative rewards until completing all sub-tasks, which results in low exploration efficiency. To solve these tasks efficiently, we propose a novel **self-guided continual RL** framework, Relay-HER (RHER). RHER first decomposes a sequential task into new sub-tasks with increasing complexity and ensures that the simplest sub-task can be learned quickly by utilizing Hindsight Experience Replay (HER). Secondly, we design a multi-goal & multi-task network to learn these sub-tasks simultaneously. Finally, we propose a Self-Guided Exploration Strategy (SGES). With SGES, the learned sub-task policy will guide the agent to the states that are helpful to learn more complex sub-task with HER. By this self-guided exploration and relay policy learning, RHER can solve these sequential tasks efficiently stage by stage. The experimental results show that RHER significantly outperforms vanilla-HER in sample-efficiency on five singleobject and five complex multi-object manipulation tasks (e.g., Push, Insert, ObstaclePush, Stack, TStack, etc.). The proposed RHER has also been applied to learn a contact-rich push task on a physical robot from scratch, and the success rate reached 10/10 with only 250 episodes.
