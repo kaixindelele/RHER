@@ -8,6 +8,10 @@ Otherwise, my PhD cycle will be extended again~
 
 Once again, the agent (me) cannot immediately influence the achieved goal~
 
+Yesterday, I review the Reincarnating RL (https://agarwl.github.io/reincarnating_rl/), and found that Jump Start RL (JSRL) has the state-distribution problem when using the guide-policy, while Self-Guided Exploration Strategy (SGES) does not. Because JSRL use the guide-policy with a certain trajectory, then transfer to learning-policy, this combination has the state-distribution problem naturally~ 
+
+Our SGES mixes guide-policy and learning-policy with the same probility, so that them have the some state-distribution~
+
 
 
 ## 1. Abstract:
