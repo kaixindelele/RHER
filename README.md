@@ -70,7 +70,7 @@ HER has an implicit **non-negative** sparse reward problem caused by indentical 
 
 
 
-Fig. 3. Illustration of the difference of HER and RHER. (a) The problem of Identical Non-Negative Rewards (INNR) with HER. (b) The proposed RHER solves the INNR problem by Self-Guided Exploration Strategy (SGES). (c) The results of comparation of RHER and HER in FetchPush.
+Fig. 3. Illustration of the difference of HER and RHER. (a) The problem of Identical Non-Negative Rewards (INNR) with HER. (b) The proposed RHER solves the INNR problem by Self-Guided Exploration Strategy (SGES). (c) The **surprising** results of comparation of RHER and HER in FetchPush (If our codes is not open source, it may seem a bit outrageous~).
 
 ## 6. A diagram of RHER:
 ![RHER_overall](https://user-images.githubusercontent.com/28528386/200154505-0c295992-9794-40dc-98da-cb482ff65c08.png)
