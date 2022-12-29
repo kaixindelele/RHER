@@ -2,9 +2,8 @@
 The official code for the paper “[Relay Hindsight Experience Replay: Self-Guided Continual Reinforcement Learning for Sequential Object Manipulation Tasks with Sparse Rewards](https://arxiv.org/abs/2208.00843)”
 
 ## Natter:
-This paper has been delivered to Knowledge-based systems. Hope for a good and quick result~  
+This paper has been delivered to Knowledge-based systems. Hope for a wonderful result~ ~ ~
 
-Otherwise, my PhD cycle will be extended again~
 
 Once again, the agent (me) cannot immediately influence the achieved goal~
 
