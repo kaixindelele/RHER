@@ -6,6 +6,7 @@ A bad result has been achieved from Knowledge-based systems ~ ~ ~
 
 > While I appreciate the effort of the work presented and the significance of the decomposing sequential tasks, the writing is awkward and lacks conciseness. The proposed presentation does not respect the elementary rules of a scientific writing.
 
+Is my writing so bad? 
 
 Once again, the agent (me) cannot immediately influence the achieved goal~
 
