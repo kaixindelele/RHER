@@ -1,8 +1,10 @@
-# RHER: (Ralay-HER)--A revolutionary variant of HER! (maybe ~ ~ ~)
+# RHER: (Ralay-HER)--A powerful variant of HER
 The official code for the paper “[Relay Hindsight Experience Replay: Self-Guided Continual Reinforcement Learning for Sequential Object Manipulation Tasks with Sparse Rewards](https://arxiv.org/abs/2208.00843)”
 
 ## Natter:
-This paper has been delivered to Knowledge-based systems. Hope for a not bad result~ ~ ~
+A bad result has been achieved from Knowledge-based systems ~ ~ ~
+
+> While I appreciate the effort of the work presented and the significance of the decomposing sequential tasks, the writing is awkward and lacks conciseness. The proposed presentation does not respect the elementary rules of a scientific writing.
 
 
 Once again, the agent (me) cannot immediately influence the achieved goal~
