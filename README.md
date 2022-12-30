@@ -10,6 +10,7 @@ Is my writing so bad?
 
 This kind of review feedback is like a huge negative sparse reward, and it's hard to guide my actions~
 
+My mentor advised me to make it clear that readers don't need to know the HER algorithm!
 -----
 
 Once again, the agent (me) cannot immediately influence the achieved goal~
