@@ -2,19 +2,6 @@
 The official code for the paper “[Relay Hindsight Experience Replay: Self-Guided Continual Reinforcement Learning for Sequential Object Manipulation Tasks with Sparse Rewards](https://arxiv.org/abs/2208.00843)”
 
 ## Natter:
-A bad result has been achieved from Knowledge-based systems ~ ~ ~
-
-> While I appreciate the effort of the work presented and the significance of the decomposing sequential tasks, the writing is awkward and lacks conciseness. The proposed presentation does not respect the elementary rules of a scientific writing.
-
-Is my writing so bad? 
-
-This kind of review feedback is like a huge negative sparse reward, and it's hard to guide my actions~
-
-My mentor advised me to make it clear that readers don't need to know the HER algorithm!
------
-
-Once again, the agent (me) cannot immediately influence the achieved goal~
-
 Yesterday, I review the Reincarnating RL (https://agarwl.github.io/reincarnating_rl/), and found that Jump Start RL (JSRL) has the state-distribution problem when using the guide-policy, while our Self-Guided Exploration Strategy (SGES) does not. Because JSRL uses the guide-policy with a certain trajectory, then transfers to learning-policy, this combination has the state-distribution problem naturally~
 
 Our SGES mixes guide-policy and learning-policy with the same probability so that they have the same state-distribution~
