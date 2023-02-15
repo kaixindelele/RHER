@@ -61,24 +61,28 @@ I found an implicit problem of HER:
 
 HER has an implicit **non-negative** sparse reward problem caused by indentical achieved goals! 
 
-![HER_INNR](https://user-images.githubusercontent.com/28528386/203673586-25942813-3304-44f0-a807-e2af3defc426.png)
+![HER_INNR_ac](https://user-images.githubusercontent.com/28528386/218956856-837d2a52-8a8b-44e0-a1d8-11747dc24422.png)
+
 
 
 
 Fig. 3. Illustration of the difference of HER and RHER. (a) The problem of Identical Non-Negative Rewards (INNR) with HER. (b) The proposed RHER solves the INNR problem by Self-Guided Exploration Strategy (SGES). (c) The **surprising** results of comparation of RHER and HER in FetchPush (If our codes is not open source, it may seem a bit outrageous~ Today, I read the controversy of the corpus indexer of NIPS and rethink our results. There should be no bug in my project, because the efficiency of the real machine is really high~).
 
 ## 6. A diagram of RHER:
-![RHER_overall](https://user-images.githubusercontent.com/28528386/200154505-0c295992-9794-40dc-98da-cb482ff65c08.png)
+![RHER_overall](https://user-images.githubusercontent.com/28528386/218956892-6a720c84-cd56-4cbb-8864-bc6d0fe6d3c9.png)
+
 
 Fig4. A diagram of RHER, of which the key components are shown in the yellow rectangles. This framework achieves self-guided exploration for a sequential task.
 
 ### 6.1 A. Task Decomposition and Rearrangement
-![RHER_task](https://user-images.githubusercontent.com/28528386/200154536-f60bae8b-98ad-45e8-9314-2b628552e90a.png)
+![RHER_task](https://user-images.githubusercontent.com/28528386/218956945-77d1eff5-c153-40d7-a536-a2f2a6505c73.png)
+
 
 Fig5. Sequential task decomposition and rearrangement.
 
 ### 6.2 B. Multi-goal & Multi-task RL Model.
-![RHER_goal_encoding](https://user-images.githubusercontent.com/28528386/203673600-9ff04ce4-804b-4e96-a612-e6c282b9d702.png)
+![RHER_goal_encoding](https://user-images.githubusercontent.com/28528386/218956993-c763ab25-da0e-4a74-95ad-5927da6d553a.png)
+
 
 
 Fig6. Multi-goal & Multi-task RL Model.
@@ -93,12 +97,14 @@ Fig6. Multi-goal & Multi-task RL Model.
 
 **Like students for scientific research, who are guided by advisers and other researchers until they need to explore a new field.**
 
-![RHER-SGES](https://user-images.githubusercontent.com/28528386/200154765-f9610d50-f392-436a-853c-4ec6ce5fcb5d.png)
+![RHER-SGES](https://user-images.githubusercontent.com/28528386/218957053-cb0c035a-aab1-4ffe-a0b2-f7723cae82e9.png)
+
 
 Fig7. Illustration of Self-Guided Exploration Strategy (SGES) in a toy push task. The black solid curve represents actual trajectory with SGES.
 
 ### 6.5 E. Relay Policy Learning.
-![RHER_relay](https://user-images.githubusercontent.com/28528386/203673624-cedfe9f5-3e53-4944-beda-fedd0d1ca947.png)
+![RHER_relay](https://user-images.githubusercontent.com/28528386/218957081-12a0961d-4d50-4c8f-9776-d08c72db6627.png)
+
 
 Fig8. A diagram of relay policy learning for a task with 3 stages. By using HER and SGES, RHER can solve the whole sequential task stage by stage with sample efficient. 
 
