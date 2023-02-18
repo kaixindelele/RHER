@@ -49,7 +49,7 @@ Our SGES mixes guide-policy and learning-policy with the same probability so tha
 
 因此，整个RHER算法，可以获得极高的样本效率，完全可以作为常见序列操作任务的骨干算法，其中的自我引导探索，也可以推广到多智能体探索和分层强化中~
 
-最后，希望这次投稿能够顺利~~
+最后，希望这次投稿能够得到各位专家的详细指导，让这篇工作能够有更好的呈现，让我自己也能更新~~~
 
 
 ## 1. Abstract:
