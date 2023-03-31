@@ -7,7 +7,7 @@ Yesterday, I review the Reincarnating RL (https://agarwl.github.io/reincarnating
 Our SGES mixes guide-policy and learning-policy with the same probability so that they have the same state-distribution~
 
 ## 中文版碎碎念：2023-02-18-10am
-<details><summary><code>查看解析结果</code></summary>
+<details><summary><code>查看中文版碎碎念</code></summary>
 最近看了《Dichotomy of Control: Separating What You Can Control from What You Cannot》，其实我文中所描述的一致非负奖励，也是其中的一种情况，只不过序列问题操作任务，如果按照这个描述，就太大了，论文中，还是以“夹爪无法改变物体的位置，而导致用HER反思后，会存在 隐式的非负稀疏奖励为切入点” 比较合适。借着这个机会，我想分享一下论文之外的感触。
 
 对于智能体的探索和学习，尤其是稀疏奖励下的效率问题，我从18年底就开始尝试了，到现在已经四年多了，我发现我对强化学习的research，也算是一种长序列稀疏奖励过程。
