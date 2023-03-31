@@ -6,6 +6,7 @@ Yesterday, I review the Reincarnating RL (https://agarwl.github.io/reincarnating
 
 Our SGES mixes guide-policy and learning-policy with the same probability so that they have the same state-distribution~
 
+
 ## 中文版碎碎念：2023-02-18-10am
 <details><summary><code>查看中文版碎碎念</code></summary>
 最近看了《Dichotomy of Control: Separating What You Can Control from What You Cannot》，其实我文中所描述的一致非负奖励，也是其中的一种情况，只不过序列问题操作任务，如果按照这个描述，就太大了，论文中，还是以“夹爪无法改变物体的位置，而导致用HER反思后，会存在 隐式的非负稀疏奖励为切入点” 比较合适。借着这个机会，我想分享一下论文之外的感触。
@@ -53,6 +54,45 @@ Our SGES mixes guide-policy and learning-policy with the same probability so tha
 最后，感谢各位专家无偿的批评和指导，以便让这篇工作有更好的呈现，让我自己也能够更好的成长~~~
 </details>
 
+<details><summary><code>English version</code></summary>
+  I recently read "Dichotomy of Control: Separating What You Can Control from What You Cannot," and the consistent non-negative rewards I described in the text are actually one of the cases. However, in the sequence problem operation task, if it's described this way, it would be too broad. In the paper, it's more appropriate to use the "implicit non-negative sparse reward after using HER for reflection due to the gripper's inability to change the object's position" as the starting point. Taking this opportunity, I would like to share some thoughts outside of the paper.
+
+I have been trying to explore and learn about agents, especially the efficiency of sparse rewards, since the end of 2018. It's been more than four years now, and I found that my research on reinforcement learning can also be considered a long sequence sparse reward process.
+
+When I was unable to produce top-tier conference and journal papers for a long time, I reflected on why I was up early but couldn't even eat a hot meal. Why was my learning efficiency so low?
+
+Looking back now, I, who was stuck in the local optimum, did not see any changes until 2021.
+
+At the end of 2021, I spent a long time reproducing the famous HER algorithm. The approach of this work is so simple and elegant that it has received nearly 2,000 citations. To explain the HER algorithm, it essentially modifies the goal to give the agent a sort of "consolation prize": Although it did not complete the given task, if the original goal was what it just accomplished, can it be considered successful?
+
+This may sound like nonsense literature, but in fact, if it completes some parts of the task, the next time the task is truly given this goal, the knowledge it learned last time can really be used!
+
+So looking back, my previous explorations and failures were also useful. For example, I spent 2 months reproducing the OpenAI Baseline version of HER, as I couldn't reproduce the same performance with Pytorch. I tried almost every hyperparameter and setting. In the process of batch tuning, since manually launching the program was too inefficient, I changed the spinningup's MPI tutorial into a grid search hyperparameter mode. The tutorial is here: https://blog.csdn.net/hehedadaq/article/details/114685906.
+
+Although I didn't produce any novel work during this long exploration process, I discovered a new problem. In the rendering process, I found that every time the FetchPush task was in the early stages of exploration, the robotic arm didn't know how to get close to the object. My most intuitive idea at the time was that this would definitely affect the efficiency of exploration! Ok, I found the problem, and my first attempt was to let the agent learn to approach before learning to operate (when I finished the entire experiment and started writing the article, I realized during the literature review that this was the approach of the SHER paper). Then I found that the effect was not as good as learning to approach and operate together, and I mixed exploration during the exploration process. This is the prototype of my RHER scheme.
+
+Stepping out of the details of this experiment, for me, the previous exploration of HER, the understanding of HER, and the skills of batch tuning laid the foundation for me to later deal with the original RHER algorithm when it couldn't be directly extended to other multi-object operation tasks. In the article, this is reflected in the fact that I made six or seven setting modifications, finally unleashing the potential of RHER and achieving the state of the art in model-free reinforcement learning for multi-object operation tasks.
+
+Past "failed" experiences and skills will help with future growth, both in and out of the article.
+
+Since today is a Saturday morning, I have some time to sort through the complex sequential tasks under sparse rewards. There are a few points that can help an agent learn quickly:
+
+Set progressive goals; it is unreasonable to aim too high from the start. This is reflected in the article by breaking down tasks, and outside of the article by setting task lists for oneself.
+
+During the learning process, identify what is within your control and what is caused by the environment or other agents. Effective learning occurs when focusing on controllable experiences. In the article, this is represented by lowering the INNR ratio, allowing the gripper to influence the block as much as possible. Outside the article, if your actions cannot change the outcome of an event, then the causality between you and the event is low, and any reflection or conclusions drawn will be inefficient.
+
+In the exploration process, having the help of mentors and experts is a shortcut to quickly navigate through areas that others have already explored. In the article, the exploration of complex subtasks is guided by the strategies of simpler subtasks that have already been learned. Outside the article, as a graduate student, I will receive guidance from mentors, senior students, and read papers, code, and blogs from experts in the field before starting my own exploration, summarization, and sharing.
+
+There is another point not discussed in this article, which will be the content of my next article. I'll share it with everyone when the opportunity arises.
+
+Regarding the third point, the article mentioned self-guided exploration. Because the content of the article is vast and my writing skills have not yet reached a proficient level, I couldn't elegantly include this in the introduction. Self-guidance needs to answer two questions: how to evaluate if a strategy is an expert strategy, and how to make good use of expert strategies? In real life, experts need objective evaluation criteria such as occupation, education, expertise, publications, patents, outstanding project experience, and so on. Another question is how to make better use of expert guidance? From a human perspective, it would be more polite to say "How can experts guide more efficiently?" Watching experts work is difficult to learn from; having an expert watch your actions and occasionally give pointers can improve your learning efficiency. However, the best approach is hands-on guidance, allowing for personal exploration while having someone to correct you when you deviate.
+
+These two questions, for the RHER article, are about sequential object manipulation tasks. Although they are a common and general category of tasks, they still have unique characteristics and can be well-divided into multiple stages. Thus, we can evaluate the success rate of each sub-strategy to determine their "expertise level." The second question is addressed by using a hybrid exploration approach that ensures efficiency while preventing policy mismatches due to offline data distribution.
+
+Therefore, the RHER algorithm achieves extremely high sample efficiency and can serve as a backbone algorithm for common sequential manipulation tasks. Its self-guided exploration can also be extended to multi-agent exploration and hierarchical reinforcement learning.
+
+Lastly, I'd like to thank all the experts for their invaluable criticism and guidance, which has allowed this work to be presented more effectively and helped me grow as well."
+</details>
 
 ## 1. Abstract:
 > Learning with sparse rewards remains a challenging problem in reinforcement learning (RL). Especially for sequential object manipulation tasks, the RL agent always receives negative rewards until completing all of the sub-tasks, which results in low exploration efficiency. To tackle the sample inefficiency for sparse reward sequential object manipulation tasks, we propose a novel self-guided continual RL framework, named Relay Hindsight Experience Replay (RHER). RHER decomposes the sequential task into several sub-tasks with increasing complexity and ensures that the simplest sub-task can be learned quickly by applying HER. Meanwhile, a multi-goal & multi-task network is designed to learn all sub-tasks simultaneously. In addition, a SelfGuided Exploration Strategy (SGES) is proposed to accelerate exploration. With SGES, the already learned sub-task policy will guide the agent to the states that are helpful to learn more complex sub-task with HER. Therefore, RHER can learn sparse reward sequential tasks efficiently stage by stage. The proposed RHER trains the agent in an end-to-end manner and is highly adaptable to avariousmanipulation tasks with sparse rewards. The experimental results demonstrate the superiority and high efficiency of RHER on a variety of single-object and multi-object manipulation tasks (e.g., ObstaclePush, DrawerBox, TStack, etc.). We perform a real robot experiment that agents learn how to accomplish a contact-rich push task from scratch. The results show that the success rate of the proposed method RHER reaches 10/10 with only 250 episodes.
