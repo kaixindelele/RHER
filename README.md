@@ -6,6 +6,11 @@ Yesterday, I review the Reincarnating RL (https://agarwl.github.io/reincarnating
 
 Our SGES mixes guide-policy and learning-policy with the same probability so that they have the same state-distribution~
 
+这种自我引导的方案，在大语言模型策略中仍然好用~
+
+This self-guided approach is still useful in large language model.
+
+
 
 ## 中文版碎碎念：2023-02-18-10am
 <details><summary><code>查看中文版碎碎念</code></summary>
