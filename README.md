@@ -1,4 +1,4 @@
-# RHER: (Ralay-HER)--A powerful variant of HER
+# RHER: (Ralay-HER)--A Powerful Variant of HER
 The official code for the paper “[Relay Hindsight Experience Replay: Self-Guided Continual Reinforcement Learning for Sequential Object Manipulation Tasks with Sparse Rewards](https://arxiv.org/abs/2208.00843)”
 
 💥💥💥<strong> RHER vs SOTA HER-based method, EBP, based on [Energy-Based Hindsight Experience Prioritization](https://github.com/ruizhaogit/EnergyBasedPrioritization)
