@@ -1,6 +1,13 @@
 # RHER: (Ralay-HER)--A powerful variant of HER
 The official code for the paper “[Relay Hindsight Experience Replay: Self-Guided Continual Reinforcement Learning for Sequential Object Manipulation Tasks with Sparse Rewards](https://arxiv.org/abs/2208.00843)”
 
+💥💥💥<strong> RHER vs SOTA HER-based method EBP, based on [Energy-Based Hindsight Experience Prioritization](https://github.com/ruizhaogit/EnergyBasedPrioritization)
+</details>
+
+![RHER_SOTA](https://user-images.githubusercontent.com/28528386/231344134-d5a46362-afb8-42c0-8e18-ce8c16ba8960.png)
+
+Under the more realistic single CPU core setting, although the EBP algorithm has achieved a great improvement in sample efficiency compared with HER, it still has obvious disadvantages compared with our RHER algorithm due to the lack of self-guided exploration.
+
 ## Natter:
 Yesterday, I review the Reincarnating RL (https://agarwl.github.io/reincarnating_rl/), and found that Jump Start RL (JSRL) has the state-distribution problem when using the guide-policy, while our Self-Guided Exploration Strategy (SGES) does not. Because JSRL uses the guide-policy with a certain trajectory, then transfers to learning-policy, this combination has the state-distribution problem naturally~
 
