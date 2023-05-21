@@ -9,7 +9,10 @@ With the advice of the expert, we evaluated the cost of our solution in detail. 
 
 In addition, with the advice of experts, we investigated more than 40 paper on multi-task reinforcement learning in the past five years, and found that our zero-padding encoding also has certain promotion value in the field of multi-task reinforcement learning, especially in the field of robot manipulation tasks, dynamic objects and goal tasks. RHER's framework really suits the new backbone in the field of robot manipulation tasks.
 
-Even in the era of LLMs, the idea of self-guided exploration can also enable LLms-based methods to achieve a stable exploration.
+Even in the era of LLMs, the idea of self-guided exploration can also enable LLms-based methods to achieve a stable exploration. We're trying it out, so stay tuned!
+
+
+
 
 
 
