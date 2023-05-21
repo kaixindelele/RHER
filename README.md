@@ -1,11 +1,12 @@
 # RHER: (Ralay-HER)--A Powerful Variant of HER
 The official code for the paper “[Relay Hindsight Experience Replay: Self-Guided Continual Reinforcement Learning for Sequential Object Manipulation Tasks with Sparse Rewards](https://arxiv.org/abs/2208.00843)”
 
-We express our gratitude for the expert guidance. Our subsequent investigation will encompass a comprehensive statistical analysis of the costs associated with RHER, including memory usage and increased computational time. Based on my previous experience, utilizing Baselines code for learning simple single-object manipulation tasks does not result in increased memory consumption for RHER, as it stores complete episode trajectories. However, during sampling, it is necessary to sequentially update two sub-tasks, thereby doubling the time-execution per epoch from 60 seconds for HER to approximately 120 seconds for RHER.
+We express our gratitude for the expert guidance! 
 
-Despite this, RHER's overall sample efficiency is significantly improved. For instance, in the FetchPush task, HER requires approximately 567 minutes to learn, whereas RHER necessitates only about 52 minutes. Furthermore, in real-world robotic experiments, the time consumed by the arm's operation renders the network update time nearly imperceptible. The memory usage is 1.7Gb.
+With the advice of the expert, we evaluated the cost of our solution in detail. After all, there is no free lunch, but by comparison, our solution only needs to pay a small price, which can greatly reduce the learning time of the whole task. It can be easily calculated from the table that in the multi-object tasks, the memory and computation time have a simple linear relationship with the number of objects, and the linear increase coefficient is very low.
 
-In multi-object manipulation tasks based on PyTorch, relabeling is performed immediately after each trajectory is collected, and transitions for multiple sub-tasks are stored separately in multiple experience buffers. Consequently, RHER's memory usage is 2N times that of the original HER version, where N denotes the number of objects to be manipulated. Although we have optimized this aspect, such as clearing the experience buffer of already-learned sub-tasks to free up memory space, the impact on a 128GB server is minimal, so we report the maximum occupancy. During each update, samples are collected separately and then combined into a complete batch, resulting in minimal additional time-execution per epoch. Specific values will be determined through further experimentation and statistical analysis.
+![image](https://github.com/kaixindelele/RHER/assets/28528386/2fb27eb7-12db-4f9f-8679-24c33dada3dc)
+
 
 
 💥💥💥<strong> 4/12/2023. RHER vs SOTA HER-based method, EBP, based on [Energy-Based Hindsight Experience Prioritization](https://github.com/ruizhaogit/EnergyBasedPrioritization)
