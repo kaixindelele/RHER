@@ -7,6 +7,10 @@ With the advice of the expert, we evaluated the cost of our solution in detail. 
 
 ![image](https://github.com/kaixindelele/RHER/assets/28528386/2fb27eb7-12db-4f9f-8679-24c33dada3dc)
 
+In addition, with the advice of experts, we investigated more than 40 paper on multi-task reinforcement learning in the past five years, and found that our zero-padding encoding also has certain promotion value in the field of multi-task reinforcement learning, especially in the field of robot manipulation tasks, dynamic objects and goal tasks. RHER's framework really suits the new backbone in the field of robot manipulation tasks.
+
+Even in the era of LLMs, the idea of self-guided exploration can also enable LLms-based methods to achieve a stable exploration.
+
 
 
 💥💥💥<strong> 4/12/2023. RHER vs SOTA HER-based method, EBP, based on [Energy-Based Hindsight Experience Prioritization](https://github.com/ruizhaogit/EnergyBasedPrioritization)
