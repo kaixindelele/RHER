@@ -24,7 +24,7 @@ Even in the era of LLMs, the idea of self-guided exploration can also enable LLm
 
 Under the more realistic single CPU core setting, although the EBP algorithm has achieved a great improvement in sample efficiency compared with HER, it still has obvious disadvantages compared with our RHER algorithm due to the lack of self-guided exploration. All experiments were conducted with the same five random seeds (1000-5000) and the hyperparameter clip_energy of EBP is 0.5.
 
-## Natter:
+## Natter 2023-02-18-10am:
 Yesterday, I review the Reincarnating RL (https://agarwl.github.io/reincarnating_rl/), and found that Jump Start RL (JSRL) has the state-distribution problem when using the guide-policy, while our Self-Guided Exploration Strategy (SGES) does not. Because JSRL uses the guide-policy with a certain trajectory, then transfers to learning-policy, this combination has the state-distribution problem naturally~
 
 Our SGES mixes guide-policy and learning-policy with the same probability so that they have the same state-distribution~
