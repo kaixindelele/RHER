@@ -1,8 +1,14 @@
 # RHER: (Ralay-HER)--A Powerful Variant of HER
 The official code for the paper “[Relay Hindsight Experience Replay: Self-Guided Continual Reinforcement Learning for Sequential Object Manipulation Tasks with Sparse Rewards](https://arxiv.org/abs/2208.00843)”
 
-## 最新中文版碎碎念：2023-06-23-00am
+## 最新中文版碎碎念－RHER对我的反向指导：2023-06-23-00am
 <details><summary><code>查看最新中文版碎碎念</code></summary>
+  综合来看RHER对我的反向指导有以下几点：
+  １.　目标可以是远大的，但要从够一够能够的着的子目标开始努力，这样会事半功倍，效率比较高
+  ２.　对于有人擅长的领域，自己不熟悉的领域，要学会寻求专家智能体的手把手教学，这样效率极高
+  ３.　技能、经验、资源和认知的积累，对你完成复杂任务来说，也是一个必要的过程
+  ４.　在自己探索复杂任务前，要充分意识到目标和自身能力中间的差距，学会切分子任务，学会寻求专家智能体的帮助和指导。
+  
   最近熟悉的朋友们都顺利毕业了，而我还在等这篇工作被正式接收，才能毕业，夜深时刻，记录一下最近的感悟。
   
   读博是我自己的一个重大抉择，2018年底的时候，我认为决策，是真正的智能，而当时强化刚开始兴起。
