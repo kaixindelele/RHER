@@ -1,6 +1,29 @@
 # RHER: (Ralay-HER)--A Powerful Variant of HER
 The official code for the paper “[Relay Hindsight Experience Replay: Self-Guided Continual Reinforcement Learning for Sequential Object Manipulation Tasks with Sparse Rewards](https://arxiv.org/abs/2208.00843)”
 
+💥💥💥<strong> 7.10. 
+It is noteworthy that in a recent work, [RoMo-HER](https://arxiv.org/abs/2306.16061), based on the RHER, has combined model-based schemes to further improve sample efficiency in the classic tasks of FetchPush and FetchPickAndPlace.
+
+Moreover, it can be seen from the paper that the authors have **independently reproduced the performance of our open-source code**.
+
+Lastly, based on the experimental results, even with the addition of model-based approaches, the improvement in sample efficiency is still limited, demonstrating that RHER is indeed highly efficient in these two standard tasks.
+
+ </strong>
+
+ ![~FAYHELW24F4F{G57ZBT}GX](https://github.com/kaixindelele/RHER/assets/28528386/86fb2a22-412f-4ebd-9364-780424997646)
+
+
+ 没想到，真的有同学，基于RHER做算法改进！
+ 
+ 当初说在readme说，希望RHER能成为新的benchmark，好像隐约能看到点希望了。
+
+ 作为一个延毕的博士生，看到这篇工作能够得到别人的认可，以及对领域的微小帮助，还是有点莫名的感慨。
+ 
+ 最后希望RHER中一些有意思的操作，可以对其他领域有一些启发，比如多智能体的合作，比如逆强化学习，比如“我的世界”这种复杂序列任务的探索，比如基于大语言模型的引导探索。
+
+ 愿世界美好
+ 
+
 ## 最新中文版碎碎念－RHER对我的反向指导：2023-06-23-00am
 <details><summary><code>查看最新中文版碎碎念</code></summary>
   综合来看RHER对我的反向指导有以下几点：
