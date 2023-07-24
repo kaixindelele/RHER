@@ -1,6 +1,10 @@
 # RHER: (Ralay-HER)--A Powerful Variant of HER
 The official code for the paper “[Relay Hindsight Experience Replay: Self-Guided Continual Reinforcement Learning for Sequential Object Manipulation Tasks with Sparse Rewards](https://arxiv.org/abs/2208.00843)”
 
+💥💥💥<strong> 7.24. 本文已被Neurocomputing接收，感谢一路以来所有帮助和支持的朋友和老师！
+</strong>
+
+
 💥💥💥<strong> 7.10. 
 It is noteworthy that in a recent work, [RoMo-HER](https://arxiv.org/abs/2306.16061), based on the RHER, has combined model-based schemes to further improve sample efficiency in the classic tasks of FetchPush and FetchPickAndPlace.
 
