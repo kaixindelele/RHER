@@ -14,6 +14,12 @@ Lastly, based on the experimental results, even with the addition of model-based
 
  </strong>
 
+
+ # Starchart
+
+[![Star History Chart](https://api.star-history.com/svg?repos=kaixindelele/RHER&type=Date)](https://star-history.com/#kaixindelele/RHER&Date)
+
+
  ![~FAYHELW24F4F{G57ZBT}GX](https://github.com/kaixindelele/RHER/assets/28528386/86fb2a22-412f-4ebd-9364-780424997646)
 
 
