@@ -1,6 +1,10 @@
 # RHER: (Ralay-HER)--A Powerful Variant of HER
 The official code for the paper “[Relay Hindsight Experience Replay: Self-Guided Continual Reinforcement Learning for Sequential Object Manipulation Tasks with Sparse Rewards](https://arxiv.org/abs/2208.00843)”
 
+论文最新版在仓库的(RHER_git.pdf)[https://github.com/kaixindelele/RHER/blob/main/RHER_Git.pdf]中可以查看。
+
+前一版本的中文版可以在(RHER_old_中文版](https://github.com/kaixindelele/RHER/blob/main/RHER-old-%E4%B8%AD%E6%96%87%E7%89%88.pdf)查看。
+
 💥💥💥<strong> 7.24. 本文已被Neurocomputing接收，感谢一路以来所有帮助和支持的朋友和老师！
 </strong>
 
