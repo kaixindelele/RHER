@@ -558,6 +558,12 @@ python -m baselines.run_rher_np1.py
 [![Star History Chart](https://api.star-history.com/svg?repos=kaixindelele/RHER&type=Date)](https://star-history.com/#kaixindelele/RHER&Date)
 
 
+## 论文引用：
+Please cite the repo if you use the data or code in this repo.
+
+欢迎大家引用这篇工作！
+
+```
 @article{RHER,
 title = {Relay Hindsight Experience Replay: Self-guided continual reinforcement learning for sequential object manipulation tasks with sparse rewards},
 journal = {Neurocomputing},
@@ -568,3 +574,6 @@ doi = {https://doi.org/10.1016/j.neucom.2023.126620},
 url = {https://www.sciencedirect.com/science/article/pii/S0925231223007439},
 author = {Yongle Luo and Yuxin Wang and Kun Dong and Qiang Zhang and Erkang Cheng and Zhiyong Sun and Bo Song},
 }
+```
+
+
