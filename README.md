@@ -11,7 +11,7 @@ The official code for the paper “[Relay Hindsight Experience Replay: Self-Guid
 </strong>
 
 
-💥💥💥<strong> 7.24. 本文已被Neurocomputing接收，感谢一路以来所有帮助和支持的朋友和老师！
+💥💥💥<strong> 7.24. 本文已被[Neurocomputing](https://www.sciencedirect.com/science/article/abs/pii/S0925231223007439)接收，感谢一路以来所有帮助和支持的朋友和老师！
 </strong>
 
 
