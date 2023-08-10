@@ -564,15 +564,13 @@ Please cite the repo if you use the data or code in this repo.
 欢迎大家引用这篇工作！
 
 ```
-@article{RHER,
-title = {Relay Hindsight Experience Replay: Self-guided continual reinforcement learning for sequential object manipulation tasks with sparse rewards},
-journal = {Neurocomputing},
-pages = {126620},
-year = {2023},
-issn = {0925-2312},
-doi = {https://doi.org/10.1016/j.neucom.2023.126620},
-url = {https://www.sciencedirect.com/science/article/pii/S0925231223007439},
-author = {Yongle Luo and Yuxin Wang and Kun Dong and Qiang Zhang and Erkang Cheng and Zhiyong Sun and Bo Song},
+@article{luo2023relay,
+  title={Relay Hindsight Experience Replay: Self-guided continual reinforcement learning for sequential object manipulation tasks with sparse rewards},
+  author={Luo, Yongle and Wang, Yuxin and Dong, Kun and Zhang, Qiang and Cheng, Erkang and Sun, Zhiyong and Song, Bo},
+  journal={Neurocomputing},
+  pages={126620},
+  year={2023},
+  publisher={Elsevier}
 }
 ```
 
