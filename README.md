@@ -312,6 +312,7 @@ Lastly, I'd like to thank all the experts for their invaluable criticism and gui
 </details>
 
 ## 查看文章简介
+
 <details><summary><code>查看文章简介</code></summary>
  
 ## 1. Abstract:
@@ -418,6 +419,7 @@ Fig8. A diagram of relay policy learning for a task with 3 stages. By using HER 
 2. One step at a time, gradually reach the distant goal.
 3. Standing on the shoulders of giants, we can avoid many detours, just like scientific research.
 
+</details>
 
 ## 8. Some interesting experiments that don't have space to show in the article:
 
@@ -429,7 +431,7 @@ But P-controller is much worse than RHER in tasks with obstacle, because RHER ha
 
 b) As for the tasks of multiple blocks, especially DPush, it is difficult to design a base controller that can push object1 to the specified position and reach the vicinity of object2, but RHER can deal with it.
 
-</details>
+
 
 ## 9. Training Videos:
 ### 9.1 Training process for stack.
