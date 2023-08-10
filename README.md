@@ -311,6 +311,9 @@ Therefore, the RHER algorithm achieves extremely high sample efficiency and can 
 Lastly, I'd like to thank all the experts for their invaluable criticism and guidance, which has allowed this work to be presented more effectively and helped me grow as well."
 </details>
 
+## 查看文章简介
+<details><summary><code>查看文章简介</code></summary>
+ 
 ## 1. Abstract:
 > Learning with sparse rewards remains a challenging problem in reinforcement learning (RL). Especially for sequential object manipulation tasks, the RL agent always receives negative rewards until completing all of the sub-tasks, which results in low exploration efficiency. To tackle the sample inefficiency for sparse reward sequential object manipulation tasks, we propose a novel self-guided continual RL framework, named Relay Hindsight Experience Replay (RHER). RHER decomposes the sequential task into several sub-tasks with increasing complexity and ensures that the simplest sub-task can be learned quickly by applying HER. Meanwhile, a multi-goal & multi-task network is designed to learn all sub-tasks simultaneously. In addition, a SelfGuided Exploration Strategy (SGES) is proposed to accelerate exploration. With SGES, the already learned sub-task policy will guide the agent to the states that are helpful to learn more complex sub-task with HER. Therefore, RHER can learn sparse reward sequential tasks efficiently stage by stage. The proposed RHER trains the agent in an end-to-end manner and is highly adaptable to avariousmanipulation tasks with sparse rewards. The experimental results demonstrate the superiority and high efficiency of RHER on a variety of single-object and multi-object manipulation tasks (e.g., ObstaclePush, DrawerBox, TStack, etc.). We perform a real robot experiment that agents learn how to accomplish a contact-rich push task from scratch. The results show that the success rate of the proposed method RHER reaches 10/10 with only 250 episodes.
 
@@ -425,6 +428,8 @@ a) I really did do a comparison experiment~ In the manipulation tasks without ob
 But P-controller is much worse than RHER in tasks with obstacle, because RHER has the ability to adapt to the environment.
 
 b) As for the tasks of multiple blocks, especially DPush, it is difficult to design a base controller that can push object1 to the specified position and reach the vicinity of object2, but RHER can deal with it.
+
+</details>
 
 ## 9. Training Videos:
 ### 9.1 Training process for stack.
