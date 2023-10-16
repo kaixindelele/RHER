@@ -7,6 +7,9 @@ The official code for the paper “[Relay Hindsight Experience Replay: Self-Guid
 
 欢迎**引用**和讨论细节。
 
+💥💥💥<strong> 10.15. 增加了baseline版本的画图脚本，和论文原始样例数据，方便大家在本工作基础上继续研究！欢迎大家star本仓库，引用本文章，感谢！
+</strong>
+
 💥💥💥<strong> 8.14. 中文版PDF已经上传到仓库：[RHER-中文版](https://github.com/kaixindelele/RHER/blob/main/RHER-%E4%B8%AD%E6%96%87%E7%89%88.pdf)
 </strong>
 
