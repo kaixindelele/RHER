@@ -4,7 +4,7 @@ from gym.envs.robotics import fetch_insert_env
 
 
 # Ensure we get the path separator correct on windows
-MODEL_XML_PATH = os.path.join('fetch', 'insert.xml')
+MODEL_XML_PATH = os.path.join('fetch', 'insert_rand.xml')
 
 
 class FetchInsertEnv(fetch_insert_env.FetchEnv, utils.EzPickle):
