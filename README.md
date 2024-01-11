@@ -7,6 +7,9 @@ The official code for the paper “[Relay Hindsight Experience Replay: Self-Guid
 
 欢迎**引用**和讨论细节。
 
+💥💥💥<strong> 24.01.11. 群友复现了Pytorch版本的RHER，大家要是有需要的话，可以直接参考群友的仓库：[PyTorch RHER](https://github.com/NoneJou072/rl-notebook/tree/main/RHER)！复现笔记：[RHER复现结果与分析](https://nonejou072.github.io/posts/rher%E5%A4%8D%E7%8E%B0/)
+</strong>
+
 💥💥💥<strong> 10.15. 增加了baseline版本的画图脚本，和论文原始样例数据，方便大家在本工作基础上继续研究！欢迎大家star本仓库，引用本文章，感谢！
 </strong>
 
