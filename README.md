@@ -7,10 +7,15 @@ The official code for the paper “[Relay Hindsight Experience Replay: Self-Guid
 
 欢迎**引用**和讨论细节。
 
-💥💥💥<strong> 24.01.11. 群友复现了Pytorch版本的RHER，大家要是有需要的话，可以直接参考群友的仓库：[PyTorch RHER](https://github.com/NoneJou072/rl-notebook/tree/main/RHER)！复现笔记：[RHER复现结果与分析](https://nonejou072.github.io/posts/rher%E5%A4%8D%E7%8E%B0/)
+💥💥💥<strong> 关于2022年在[arxiv](https://arxiv.org/pdf/2208.00843.pdf)的预印版与2023年发表在[Neurocomputing](https://www.sciencedirect.com/science/article/abs/pii/S0925231223007439)上的正式版本实验结果差异的解释</strong>：2022年的实验是在装有GeForce RTX 3090显卡的Ubuntu18.04服务器上进行的，经典任务的实验结果分别为78K和250K。然而，在后续补充其他实验时，我使用的是另一台装有GeForce RTX 2080Ti显卡的Ubuntu18.04服务器。即使算法、环境和随机种子完全相同，在2080Ti服务器上重做经典任务的实验结果也更优，分别为65K和243K（非常神奇的现象，可能的原因是硬件服务器和显卡的差异。好在两次实验结果的差距并不大，大家在复现时仍然能得到类似的结果）。因此，在正式版论文中，我自然采用了表现更好的2080Ti服务器的实验结果（当然，如果大家要引用RHER算法作为对比，也可以使用Arxiv上的数据，因为两组数据都是真实可靠的）。此外，这部分数据之前已经上传到了[仓库](https://github.com/kaixindelele/RHER/tree/main/data/fig_baseline/single_process)中，方便大家在做对比时直接将其绘制到曲线图中。最后需要说明的是，新版本论文中RHER的所有实验，包括真机实验，都是在2080Ti服务器上运行得到的。
+
+💥💥💥<strong> 24.04.10. 之前提出[RoMo-HER](https://arxiv.org/abs/2306.16061)的群友[Yuming](https://github.com/Yuming2023)告诉我，正式版变更为MRHER算法，已经被IJCNN2024接收。并且Yuming还提出了改进版的SGES算法，可以进一步提高RHER算法的样本效率。得知这个消息，就很令人开心，有一种“接力式”科研探索的样子~~</strong>
+
+
+💥💥💥<strong> 24.01.11. 群友[NoneJou](https://github.com/NoneJou072)复现了Pytorch版本的RHER，大家要是有需要的话，可以直接参考群友的仓库：[PyTorch RHER](https://github.com/NoneJou072/rl-notebook/tree/main/RHER)！复现笔记：[RHER复现结果与分析](https://nonejou072.github.io/posts/rher%E5%A4%8D%E7%8E%B0/)
 </strong>
 
-💥💥💥<strong> 10.15. 增加了baseline版本的画图脚本，和论文原始样例数据，方便大家在本工作基础上继续研究！欢迎大家star本仓库，引用本文章，感谢！
+💥💥💥<strong> 10.15. 增加了baseline版本的画图脚本，和论文原始样例数据，方便大家在本工作基础上继续研究！欢迎大家star本仓库，引用RHER算法，感谢！
 </strong>
 
 💥💥💥<strong> 8.14. 中文版PDF已经上传到仓库：[RHER-中文版](https://github.com/kaixindelele/RHER/blob/main/RHER-%E4%B8%AD%E6%96%87%E7%89%88.pdf)
@@ -21,14 +26,10 @@ The official code for the paper “[Relay Hindsight Experience Replay: Self-Guid
 </strong>
 
 
-💥💥💥<strong> 7.10. 
-It is noteworthy that in a recent work, [RoMo-HER](https://arxiv.org/abs/2306.16061), based on the RHER, has combined model-based schemes to further improve sample efficiency in the classic tasks of FetchPush and FetchPickAndPlace.
+💥💥💥<strong> 7.10. 群友[Yuming](https://github.com/Yuming2023)基于RHER算法，提出了[RoMo-HER](https://arxiv.org/abs/2306.16061)算法。该方法结合基于模型的方案，利用前瞻性虚拟交互，提供虚拟目标用于扩增数据，可以进一步提高了在经典任务FetchPush和FetchPickAndPlace中的样本效率。 </strong> 从论文中可以看出，作者已经独立复现出了我们开源代码的性能。并且，根据实验结果可以看出，即使加入了基于模型的方法，样本效率已经不再有倍数级别的提升，这表明在这两个标准任务中，RHER的样本效率已经足够高，INNR比例的降低确实是影响效率的关键。
 
-Moreover, it can be seen from the paper that the authors have **independently reproduced the performance of our open-source code**.
 
-Lastly, based on the experimental results, even with the addition of model-based approaches, the improvement in sample efficiency is still limited, demonstrating that RHER is indeed highly efficient in these two standard tasks.
 
- </strong>
 
 
  # Starchart
