@@ -7,7 +7,7 @@ The official code for the paper “[Relay Hindsight Experience Replay: Self-Guid
 
 欢迎**引用**和讨论细节。
 
-💥💥💥<strong> 关于2022年在[arxiv](https://arxiv.org/pdf/2208.00843.pdf)的预印版与2023年发表在[Neurocomputing](https://www.sciencedirect.com/science/article/abs/pii/S0925231223007439)上的正式版本实验结果差异的解释</strong>：2022年的实验是在装有GeForce RTX 3090显卡的Ubuntu18.04服务器上进行的，经典任务的实验结果分别为78K和250K。然而，在后续补充其他实验时，我使用的是另一台装有GeForce RTX 2080Ti显卡的Ubuntu18.04服务器。即使算法、环境和随机种子完全相同，在2080Ti服务器上重做经典任务的实验结果也更优，分别为65K和243K（非常神奇的现象，可能的原因是硬件服务器和显卡的差异。好在两次实验结果的差距并不大，大家在复现时仍然能得到类似的结果）。因此，在正式版论文中，我自然采用了表现更好的2080Ti服务器的实验结果（当然，如果大家要引用RHER算法作为对比，也可以使用Arxiv上的数据，因为两组数据都是真实可靠的）。此外，这部分数据之前已经上传到了[仓库](https://github.com/kaixindelele/RHER/tree/main/data/fig_baseline/single_process)中，方便大家在做对比时直接将其绘制到曲线图中。最后需要说明的是，新版本论文中RHER的所有实验，包括真机实验，都是在2080Ti服务器上运行得到的。
+💥💥💥<strong> 关于2022年在[arxiv](https://arxiv.org/pdf/2208.00843.pdf)的预印版与2023年发表在[Neurocomputing](https://www.sciencedirect.com/science/article/abs/pii/S0925231223007439)上的正式版本实验结果差异的解释</strong>：2022年的实验是在装有GeForce RTX 3090显卡的Ubuntu18.04服务器上进行的，经典任务的实验结果分别为78K和250K。然而，在后续补充其他实验时，3090服务器被其他同学在使用，我可以连续使用的是另一台装有GeForce RTX 2080Ti显卡的Ubuntu18.04服务器。即使算法、环境和随机种子完全相同，在2080Ti服务器上重做经典任务的实验结果也更优，分别为65K和243K（非常神奇的现象，可能的原因是硬件服务器和显卡的差异。好在两次实验结果的差距并不大，大家在复现时仍然能得到类似的结果）。因此，在正式版论文中，我自然采用了表现更好的2080Ti服务器的实验结果（当然，如果大家要引用RHER算法作为对比，也可以使用Arxiv上的数据，因为两组数据都是真实可靠的，哈哈，理解万岁~）。此外，这部分数据之前已经上传到了[仓库](https://github.com/kaixindelele/RHER/tree/main/data/fig_baseline/single_process)中，方便大家在做对比时直接将其绘制到曲线图中。最后需要说明的是，新版本论文中RHER的所有实验，包括真机实验，都是在2080Ti服务器上运行得到的，。
 
 💥💥💥<strong> 24.04.10. 之前提出[RoMo-HER](https://arxiv.org/abs/2306.16061)的群友[Yuming](https://github.com/Yuming2023)告诉我，正式版变更为MRHER算法，已经被IJCNN2024接收。并且Yuming还提出了改进版的SGES算法，可以进一步提高RHER算法的样本效率。得知这个消息，就很令人开心，有一种“接力式”科研探索的样子~~</strong>
 
